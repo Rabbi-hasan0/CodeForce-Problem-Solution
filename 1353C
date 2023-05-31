@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;cin>>t;
+    while(t--)
+    {
+    long long int n,s=0,i;
+    cin>>n;
+    for(i=1; i<=n/2; i++)
+        s+=8*i*i;
+    cout<<s<<endl;
+    }
+}
