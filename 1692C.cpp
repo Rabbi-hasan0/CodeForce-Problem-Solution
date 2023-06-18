@@ -1,3 +1,8 @@
+/**
+**     Author: Rabbi Hasan
+**     Bangladesh University of Business and Technology,
+**     Dept. of CSE.
+***/
 /* header file */
 #include<bits/stdc++.h>
 #include<stack>
@@ -25,41 +30,56 @@
 #define elif else if
 #define ll long long
 #define lli long long int
+#define pb push_back
 /* testcase */
 #define test() int t;cin>>t;while(t--)
 #define testt() int t;cin>>t;for(int i=1; i<=t; i++)
-#define f(i, n) for(int i = 0; i < n; i++)
+#define f(i,n) for(lli i = 0; i < n; i++)
 using namespace std;
-const long long MOD = 1e9 + 7;
-/* GCD Finding Algo */
-int gcd(int a, int b)
-{
-    if(b==0)
-        return a;
-    return gcd(b,a%b);
-}
+const ll mod = 1e9 + 7;
+//const ll N = 2e5 + 10;
 /*  let's started  */
+
 void solved()
 {
     test()
     {
-        int n;
-        cin>>n;
-        int a[n];
-        set<int>s;
-        for(int i=0; i<n; i++)
+        char s[8][8];
+        for(int i=0; i<8; i++)
         {
-            cin>>a[i];
-            s.insert(a[i]);
+            for(int j=0; j<8; j++)
+            {
+
+                cin>>s[i][j];
+
+            }
         }
-        int sum=n-s.size();
-        if(sum%2==0) cout<<s.size()<<nn;
-        else cout<<s.size()-1<<nn;
+        int flag=0;
+        for(int i=0; i<8; i++)
+        {
+            for(int j=0; j<8; j++)
+            {
+                if(s[i][j]=='#')
+                    if(s[i][j+2]=='#')
+                        if(s[i+1][j+1]=='#')
+                            if(s[i+2][j]=='#')
+                                if(s[i+2][j+2]=='#')
+                                {
+                                  cout<<i+2<< ' '<<j+2<<nn;
+                                  flag=1;
+                                  break;
+                                }
+            //cout<<s[i][j]<<nn;
+            }
+            if(flag==1) break;
+        }
     }
 }
+
 int main()
 {
     fast();
     solved();
     return 0;
 }
+
