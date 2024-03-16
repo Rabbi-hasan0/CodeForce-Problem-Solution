@@ -1,28 +1,4 @@
-#include <algorithm>
-#include <bitset>
-#include <array>
-#include <tuple>
-#include <functional>
-#include <iomanip>
-#include <iostream>
-#include <istream>
-#include <iterator>
-#include <limits>
-#include <list>
-#include <locale>
-#include <map>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <string>
-#include <vector>
-#include <condition_variable>
-#include <forward_list>
-#include <ratio>
-#include <regex>
-#include <unordered_map>
-#include <unordered_set>
+#include <bits/stdc++.h>
 #define int long long
 using namespace std;
 
